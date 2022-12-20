@@ -1,0 +1,53 @@
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  
+  <!-- Load Babel compiler -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<!--                            classs Component 
+           this is used for propsin class component
+-->
+
+<div  id="root"></div>
+
+<script  type="text/babel">
+    class Product extends React.Component//  when u extends React.Component it will act as comp
+    {
+        render()
+        {
+             console.log(this)
+               return 
+               (
+                <div>
+                    <h1>{this.props.name}</h1>
+                  <h1>{this.props.price}</h1>
+                    
+                    </div>
+                  )
+        }
+    }
+    var record=
+    (
+        <div>
+            <h1> < Product  name="pro1"  price="2000"/></h1>
+            <h1> < Product  name="pro2"  price="1000"/></h1>
+            <h1> < Product  name="pro3"  price="5000"/></h1>
+            <h1> < Product  name="pro4"  price="1000"/></h1> 
+           
+            </div>
+    )
+
+    var tg= ReactDOM.createRoot(document.getElementById('root')
+    )
+
+    tg.render(record);
+
+</script>
+

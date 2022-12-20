@@ -1,0 +1,31 @@
+ <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+
+                               <!--  JSX EXAPMPLE  -->
+
+            <!--  but we normally use render the element using JSX, JSX make simple to rendering tags on UI . we use bable compiler to make simple   -->
+
+
+
+<!-- Load Babel    https://babeljs.io/docs/en/babel-standalone -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>  
+<div   id="root"></div>
+
+
+<script  type="text/babel"> // let compile this code by babel compiler // not using here js compiler  / it is easy as compare to ejs  / jsx is neither html nor string
+  var userName=" Danish";
+ var h1Tag =( // boundry 
+    <div>
+        <h1> hello  {userName}</h1>             /* // not string nor html  */
+        <h1> world</h1>
+        <h1> Test</h1>
+
+    </div>
+ )
+ var tg = ReactDOM.createRoot(document.getElementById('root'))
+    tg.render(h1Tag)
+</script>

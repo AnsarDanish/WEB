@@ -1,0 +1,23 @@
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <div id="root "  style="border: solid;padding :30px">
+
+  </div>
+                                          <!-- render one element  without JSX-->
+
+  <script>
+    console.log(typeof React)
+      /// how to  render element on screen using react
+    var h1Tag = React.createElement('h1' , {class:'text-center' , id:'xyz'},'hello react');
+    console.log(h1Tag);
+    var root= ReactDOM.createRoot(document.getElementById('root'))
+    console.log(root);
+
+    root.render(h1Tag);
+
+  </script>

@@ -1,0 +1,84 @@
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  
+  <!-- Load Babel compiler -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!--                     Function Component
+    
+    1. How to create component in React
+            The simplest way to define a component is to write a JavaScript function:
+            component must return somthing
+
+       2.  what is component
+          Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components.
+-->
+
+<div id="root"></div>
+
+
+<script  type="text/babel">
+    function Listdata() {
+              return(
+                 <ul>
+                     <li> <input type="checkbox"/> NIKE</li>
+                     <li> <input type="checkbox"/> puma</li>
+                     <li> <input type="checkbox"/> Adidas</li>
+                     <li> <input type="checkbox"/> ZAra</li>
+                    </ul>
+              )
+           
+            }
+    function Product()
+    {
+        return (
+            <div  class="col-xl-3">
+    <img src="https://sslimages.shoppersstop.com/sys-master/images/hfd/hcb/27896310104094/A22SFQSPP463374_WHITE.jpg_230Wx334H"  class="img-fluid" alt=""/>
+    <h2>Allen Solly</h2>
+    <p>1200</p>
+    <p>
+        <button>Add to cart</button>
+    </p>
+</div>
+        )
+
+    }
+
+    var record= (
+<div class="container">
+    <div  class="row">
+        <div class="col-xl-3">
+            <h1>Brands</h1>
+             <Listdata />
+             <h1>Discount</h1>
+             <Listdata />
+             <h1>size</h1>
+             <Listdata />
+
+        </div>
+       
+        <div class="class-xl-9">
+             <h1>ALL products</h1>
+             <div  class="row"  >
+                <Product/>
+                <Product/>
+                <Product/>
+            </div>
+        </div>
+   </div>
+</div>
+
+    );
+    
+    var tg = ReactDOM.createRoot(document.getElementById('root'));
+    tg.render(record)
+
+</script>
+
+

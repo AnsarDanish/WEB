@@ -1,0 +1,27 @@
+<!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <div  id="root"></div>
+
+
+                                        <!-- render many element -->
+
+  <script>
+     var h1tag = React.createElement('h1' ,{class:'text-center'} , 'h1 data')
+     var h2tag = React.createElement('h1' ,{class:'text-center'} , 'h2 data')
+     // for many element we have to create parents tag
+     var divtag = React.createElement('div' , null, h1tag, h2tag)
+
+     var root =ReactDOM.createRoot(document.getElementById('root'));
+     root.render(divtag);
+  </script>
+<!--  expected result       
+  <div  id =" root">
+    <div>
+        <h1></h1>
+        <h2></h2>
+    </div>
+
+  </div> -->
